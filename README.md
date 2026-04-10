@@ -1,4 +1,4 @@
-# 📊 Multi-Platform Advertising Performance Analysis
+#  Multi-Platform Advertising Performance Analysis
 
 ## Problem
 
