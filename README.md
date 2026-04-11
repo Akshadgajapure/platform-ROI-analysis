@@ -114,24 +114,10 @@ Cost to acquire one customer. Lower is better.
 
 ---
 
-## Contact & Support
 
-For questions or issues:
-- Review notebook comments for detailed methodology
-- Check [DATASET.md](DATASET.md) for data specifications
-- Verify data freshness before re-running analysis
-- Ensure all required libraries are installed
 
----
 
-## Changelog
 
-| Date | Version | Changes |
-|------|---------|---------|
-| 2026-04-11 | 1.1 | Added dataset links and Getting Started section |
-| 2026-04-02 | 1.0 | Initial analysis complete |
-
----
 
 ## Key Takeaways
 
@@ -141,8 +127,5 @@ For questions or issues:
 ✅ **Recommend controlled testing** with 10–15% budget before major reallocation  
 ✅ **Medium confidence level** — statistical signal is strong, but observational data limits causal inference  
 
----
 
-**Created**: April 2, 2026  
-**Last Updated**: April 11, 2026  
-**Status**: Ready for implementation & deployment
+
