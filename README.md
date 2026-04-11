@@ -37,11 +37,25 @@ Python, Pandas, NumPy, SciPy, Matplotlib, Seaborn
 
 ---
 
+## Files & Folder Structure
+
+```
+AB Testing/
+├── main.ipynb                              # Main analysis notebook
+├── global_ads_performance_dataset.csv      # Raw advertising performance dataset
+├── DATASET.md                              # Dataset documentation
+└── README.md                               # This file
+```
+
+---
+
 ## Dataset Description
 
-See **DATASET.md** for detailed documentation on:
+**Dataset File**: [global_ads_performance_dataset.csv](global_ads_performance_dataset.csv)
+
+**Documentation**: See [DATASET.md](DATASET.md) for detailed documentation on:
 - Column descriptions
-- Platform details
+- Platform details (Google, Meta, TikTok)
 - Industry categories
 - Campaign types
 - Geographic regions
@@ -49,38 +63,64 @@ See **DATASET.md** for detailed documentation on:
 
 ---
 
-## Methodology
+## Getting Started
 
-### Statistical Approach
-- **Hypothesis Testing**: ANOVA with α = 0.05 significance level
-- **Descriptive Statistics**: Mean, median, standard deviation analysis
-- **Comparative Analysis**: Platform-to-platform comparisons
-- **Segmentation**: Industry, campaign type, and geographic breakdowns
+### Prerequisites
+- Python 3.8+
+- Jupyter Notebook or JupyterLab
+- Required Libraries: pandas, numpy, scipy, matplotlib, seaborn
 
-### Limitations
-- Analysis based on 2024 data only
-- Results may vary with seasonal changes
-- External factors not captured in dataset
-- Requires continuous monitoring for trend detection
+### Running the Analysis
+
+1. Open the main notebook:
+   ```bash
+   jupyter notebook main.ipynb
+   ```
+
+2. Execute cells sequentially from top to bottom
+
+3. The notebook will automatically load [global_ads_performance_dataset.csv](global_ads_performance_dataset.csv) and generate results
 
 ---
 
-## Next Steps
+## Analysis Sections
 
-1. **Export Results**: Share key findings with stakeholders
-2. **Implement Changes**: Adjust budgets based on recommendations
-3. **Monitor KPIs**: Track performance post-implementation
-4. **Iterate**: Run new tests and update analysis quarterly
-5. **Expand Analysis**: Add more platforms, industries, or metrics
+The main analysis covers:
+
+1. **Data Exploration** - Load dataset, check data types, missing values, platform distribution
+2. **Descriptive Statistics** - Calculate mean, median, std dev for key metrics by platform
+3. **Key Metrics Calculation** - Compute ROAS, CTR, and CPA for each campaign
+4. **Statistical Testing** - Perform ANOVA to test platform differences (α = 0.05)
+5. **Controlled Comparison** - Analyze platform performance within each campaign type
+6. **Selection Bias Analysis** - Check campaign type distribution across platforms
+7. **Visualizations** - Box plots, bar charts, and segmented performance views
+8. **Recommendations** - Budget allocation strategy and next steps
+
+---
+
+## Key Metrics
+
+### ROAS (Return on Ad Spend)
+$$ROAS = \frac{Revenue}{Spend}$$
+Higher is better. Target > 3.0x for profitability.
+
+### CTR (Click-Through Rate)
+$$CTR = \frac{Clicks}{Impressions} \times 100$$
+Percentage of viewers who clicked. Indicates ad relevance.
+
+### CPA (Cost Per Acquisition)
+$$CPA = \frac{Spend}{Conversions}$$
+Cost to acquire one customer. Lower is better.
 
 ---
 
 ## Contact & Support
 
-For questions or issues with this analysis:
-- Review the notebook comments for methodology details
-- Check DATASET.md for data specifications
+For questions or issues:
+- Review notebook comments for detailed methodology
+- Check [DATASET.md](DATASET.md) for data specifications
 - Verify data freshness before re-running analysis
+- Ensure all required libraries are installed
 
 ---
 
@@ -88,10 +128,21 @@ For questions or issues with this analysis:
 
 | Date | Version | Changes |
 |------|---------|---------|
+| 2026-04-11 | 1.1 | Added dataset links and Getting Started section |
 | 2026-04-02 | 1.0 | Initial analysis complete |
 
 ---
 
+## Key Takeaways
+
+✅ **TikTok shows higher average ROAS** but differences shrink when controlling for campaign type  
+✅ **Selection bias is significant** — high-performing platforms are allocated more favorable campaign types  
+✅ **Budget allocation should prioritize campaign objectives first**, not platform choice  
+✅ **Recommend controlled testing** with 10–15% budget before major reallocation  
+✅ **Medium confidence level** — statistical signal is strong, but observational data limits causal inference  
+
+---
+
 **Created**: April 2, 2026  
-**Last Updated**: April 2, 2026  
-**Status**: Ready for implementation
+**Last Updated**: April 11, 2026  
+**Status**: Ready for implementation & deployment
